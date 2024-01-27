@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FPTBook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/sign-in.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/sign-up.css" asp-append-version="true">
+
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/FPTBook.styles.css" asp-append-version="true" /> *@
+</head>
+<body>
+    @* <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FPTBook</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header> *@
+
+    <div class="header">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="#">FREE EBOOK EXCLUSIVELY FOR B&N PREMIUM MEMBERS</a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#">FREE EBOOK EXCLUSIVELY FOR B&N PREMIUM MEMBERS</a>
+                </div>
+                <div class="carousel-item">
+                    <a href="#">FREE EBOOK EXCLUSIVELY FOR B&N PREMIUM MEMBERS</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mainNav">
+            <div class="utility-bar">
+                <ul class="content-start">
+                    <li class="nav-item"><a href="#">STORES & EVENTS</a></li>
+                    <li class="nav-item"><a href="#">BLOG & PODCAST</a></li>
+                    <li class="nav-item"><a href="#">MEMBERSHIP</a></li>
+                    <li class="nav-item"><a href="#">COUPONS & DEALS</a></li>
+                    <li class="nav-item"><a href="#">BESTSELLERS</a></li>
+                    <li class="nav-item"><a href="#">GIFT CARDS</a></li>
+                </ul>
+
+                <ul class="content-end">
+                    <partial name="_LoginPartial" />
+                    <li class="wishlist">
+                        <a href="#">
+                            <span class="wish-icon"><i class="fa-regular fa-heart"></i></span>
+                            Wishlist
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="logo-bar">
+                <div class="logo"><a asp-action="Index" asp-controller="Home"></a></div>
+                <form method="get" asp-action="DisplayProductBySearch">
+                    <input class="text-box" type="text" name="search-term" placeholder="Type here to search your book">
+                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <ul class="cart-box">
+                    <li class="cart-icon"><a asp-action="Cart"> <i class="fa-solid fa-cart-shopping"></i> </a></li>
+                    @await Component.InvokeAsync("CartQty")
+                </ul>
+            </div>
+
+            <div class="navbar">
+                <ul>
+                    <li class="nav-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+                    <li class="nav-item">
+                        <a href="#">Genre</a>
+                        <div class="drop-menu">
+                            @await Component.InvokeAsync("GenreNav")
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#">New Books</a></li>
+                    <li class="nav-item"><a href="#">Best Sellers</a></li>
+                    <li class="nav-item"><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+
+    <footer class="footer-07">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center mt-5">
+                    <h2 class="footer-heading"><a href="#" class="logo">FptBook.com</a></h2>
+                    <p class="menu pt-3">
+                        <a href="#">Home</a>
+                        <a href="#">Agent</a>
+                        <a href="#">About</a>
+                        <a asp-action="HelpCenter">HELP</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contact</a>
+                    </p>
+                    <ul class="ftco-footer-social p-0">
+                        <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="ion-logo-twitter"><i class="fa-brands fa-twitter"></i></span></a></li>
+                        <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="ion-logo-facebook"><i class="fa-brands fa-facebook"></i></span></a></li>
+                        <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="ion-logo-instagram"><i class="fa-brands fa-instagram"></i></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5 copy-right">
+                <div class="col-md-12 text-center">
+                    <p class="copyright">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-ios-heart" aria-hidden="true"></i> by <a href="#" target="_blank">FptBook.com</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-1.11.0.min.js" asp-append-version="true"></script>
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-migrate-1.2.1.min.js" asp-append-version="true"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" asp-append-version="true"></script>
+    <script src="~/js/main.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

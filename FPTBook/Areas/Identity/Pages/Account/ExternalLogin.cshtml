@@ -1,0 +1,92 @@
+﻿@page
+@model ExternalLoginModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+@* <p id="external-login-description" class="text-info">
+    You've successfully authenticated with <strong>@Model.ProviderDisplayName</strong>.
+    Please enter an email address for this site below and click the Register button to finish
+    logging in.
+</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-page-handler="Confirmation" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Email" class="form-control" autocomplete="email" placeholder="Please enter your email."/>
+                <label asp-for="Input.Email" class="form-label"></label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <button type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+        </form>
+    </div>
+</div> *@
+
+<style>
+    .google-register-content {
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .google-register-content .title {
+            font-size: 2rem;
+            opacity: 0.8;
+        }
+
+        .google-register-content form input {
+            width: 25rem;
+            height: 3rem;
+            font-size: 1.2rem;
+            padding-left: 1rem;
+            outline: none;
+            border: 1px solid var(--main-color);
+            border-top-left-radius: 9999px;
+            border-bottom-left-radius: 9999px;
+        }
+
+        .google-register-content .form {
+            margin-top: 2rem;
+        }
+
+        .google-register-content form button {
+            width: 8rem;
+            height: 3rem;
+            font-size: 1.2rem;
+            background-color: var(--main-color);
+            border: none;
+            color: #fff;
+            font-weight: bolder;
+            border-top-right-radius: 9999px;
+            border-bottom-right-radius: 9999px;
+            margin-left: -0.3rem;
+            transition: linear 0.3s;
+        }
+
+            .google-register-content form button:hover {
+                opacity: 0.7;
+            }
+</style>
+
+<hr>
+
+<div class="google-register-content">
+    <div class="title">
+        Please confirm your email to register!
+    </div>
+    <div class="form">
+        <form asp-page-handler="Confirmation" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <input type="text" asp-for="Input.Email" readonly>
+            <button type="submit">Confirm</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

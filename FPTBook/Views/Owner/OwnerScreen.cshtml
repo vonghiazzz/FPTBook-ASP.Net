@@ -1,0 +1,423 @@
+﻿@{
+    var ownerProduct = ViewData["OwnerProduct"] as IEnumerable<Product>;
+    var productSearch = ViewData["ProductSearch"] as IEnumerable<Product>;
+    var orderNumberSearch = ViewData["OrderNumberSearch"] as IEnumerable<dynamic>;
+    var genreRequest = ViewData["GenreRequest"] as IEnumerable<NewGenre>;
+    var orderRecord = ViewData["OrderRecord"] as IEnumerable<dynamic>;
+    var orderDetail = ViewData["OrderDetail"] as dynamic;
+    var orderMoredetail = ViewData["OrderMoreDetail"] as IEnumerable<dynamic>;
+}
+@model FPTBook.Models.Product
+
+<hr class="div-owner">
+
+<link rel="stylesheet" href="~/css/owner.css" asp-append-version="true">
+<div class="owner-content">
+    <div class="side-bar">
+        <div class="user">
+            <img class="user-avatar" src="~/uploads/@ViewData["OwnerPicture"]" alt="">
+            <div class="user-name">
+                <p>@ViewData["OwnerName"]</p>
+            </div>
+        </div>
+        <hr>
+        <div class="side-nav">
+            <ul>
+                <li class="nav-item"><i class="fa-solid fa-book"></i>Book management</li>
+                <li class="nav-item"><i class="fa-solid fa-code-pull-request"></i>Request a new genre</li>
+                <li class="nav-item"><i class="fa-solid fa-clipboard"></i>Recorded order</li>
+                <li class="nav-item"><i class="fa-solid fa-file-export"></i>Export file</li>
+                <li class="nav-item"><i class="fa-solid fa-chart-pie"></i>Statistical</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="item-section active">
+        <div class="book-management-display">
+            <div class="head">
+                <div class="add-book-btn">Add a new book</div>
+                <form class="form-search" asp-action="index" asp-controller="Owner" method="get">
+                    <input type="search" name="search-term" placeholder="Type here to search your book">
+                </form>
+                <a href="#">HELP</a>
+            </div>
+            <div class="body">
+                <div class="list-book">
+                    @if ((bool)ViewData["ViewSearch"])
+                    {
+                        @foreach (var product in productSearch)
+                        {
+                            <div class="book-item">
+                                <img src="~/uploads/@product.Picture" alt="">
+                                <div class="action">
+                                    <a class="update" asp-action="Edit" asp-controller="Products" asp-route-id="@product.Id">Update</a>
+                                    <a class="delete" asp-action="Delete" asp-controller="Products" asp-route-id="@product.Id">Delete</a>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        @foreach (var product in ownerProduct)
+                        {
+                            <div class="book-item">
+                                <img src="~/uploads/@product.Picture" alt="">
+                                <div class="action">
+                                    <a class="update" asp-action="Edit" asp-controller="Products" asp-route-id="@product.Id">Update</a>
+                                    <a class="delete" asp-action="Delete" asp-controller="Products" asp-route-id="@product.Id">Delete</a>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+                <div class="pagination-box">
+                    <ul class="list-page">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-management-add">
+            <div class="head">
+                <a class="add-book-back-btn" href="#"><i class="fa-solid fa-delete-left"></i></a>
+                <a href="#">HELP</a>
+            </div>
+            <div class="body">
+                <div class="process">
+                    <div class="process-item active">Create Publisher</div>
+                    <div class="arrow"><i class="fa-solid fa-right-long"></i></div>
+                    <div class="process-item">Create Author</div>
+                    <div class="arrow"><i class="fa-solid fa-right-long"></i></div>
+                    <div class="process-item">Create Book</div>
+                </div>
+                <div class="form-create-box">
+                    <div class="form-create active">
+                        <form id="form-publisher" asp-action="Create" asp-controller="Publishers" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <input type="text" name="publisher-name" placeholder="Publisher name">
+                            </div>
+                            <button class="publisher-btn" type="submit">Create</button>
+                        </form>
+                    </div>
+                    <div class="form-create">
+                        <form id="form-author" asp-action="Create" asp-controller="Authors" enctype="multipart/form-data" method="post">
+                            <div class="form-group">
+                                <input type="text" name="author-name" placeholder="Author name">
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="5" name="author-description" placeholder="Author description"></textarea>
+                            </div>
+                            <div class="form-group"><img id="author-preview" src="~/images/default-thumbnail.jpg" alt=""></div>
+                            <div class="form-group-author-file">
+                                <label for="file-author">Author Picture</label>
+                                <input id="file-author" type="file" name="imageFile">
+                            </div>
+                            <button class="author-btn" type="submit">Create</button>
+                        </form>
+                    </div>
+                    <div class="form-create">
+                        <form asp-action="Create" asp-controller="Products" id="form-product" enctype="multipart/form-data" method="post">
+                            <div class="form-group">
+                                <input type="text" asp-for="Name" placeholder="Book name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" asp-for="Quantity" placeholder="Book quantity">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" asp-for="Price" placeholder="Book price (Unit: $)">
+                            </div>
+                            <div class="form-group"><img id="product-preview" src="~/images/default-thumbnail.jpg" alt=""></div>
+                            <div class="form-group-product-file">
+                                <label for="file-book">Book Picture</label>
+                                <input id="file-book" asp-for="ImageFile">
+                            </div>
+                            <div class="form-group-date">
+                                <label for="publish-date">Publish Date</label>
+                                <input id="publish-date" asp-for="PublishDate">
+                            </div>
+                            <div class="form-group-date">
+                                <label for="import-date">Import Date</label>
+                                <input id="import-date" asp-for="ImportDate">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Page numbers" asp-for="PageNumber">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="language" asp-for="Language">
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="3" placeholder="Book description" asp-for="Description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <select asp-for="Status">
+                                    <option selected>Status of book</option>
+                                    <option value="true">Available</option>
+                                    <option value="false">Unavailable</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select asp-for="AuthorId" asp-items="ViewBag.Authors">
+                                    <option selected>Author of book</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select asp-for="GenreId" asp-items="ViewBag.Genres">
+                                    <option selected>Genre of book</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select asp-for="PublisherId" asp-items="ViewBag.Publishers">
+                                    <option selected>Publisher of book</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="product-btn">Create</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="item-section">
+        <div class="view-request-history">
+            View request history
+        </div>
+        <span class="back-request"><i class="fa-solid fa-delete-left"></i></span>
+        <table class="table table-request">
+            <thead>
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if(genreRequest != null)
+                {
+                    foreach (var g in genreRequest)
+                    {
+                        <tr>
+                            <th scope="row">@g.Id</th>
+                            <td>@g.Name</td>
+                            @if(g.Status == null)
+                            {
+                                <td class="genre-process">Process</td>
+                            }
+                            else if (g.Status == true)
+                            {
+                                <td class="genre-accept">Accepted</td>
+                            }
+                            else
+                            {
+                                <td class="genre-reject">Rejected</td>
+                            }
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        empty
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <form id="form-request-genre" asp-action="RequestNewGenre" asp-controller="Owner" method="post">
+            <div class="form-group">
+                <input type="text" name="genreReq" placeholder="Type a new genre">
+            </div>
+            <button type="submit">Request</button>
+        </form>
+    </div>
+
+    <div class="item-section">
+        <div class="order-display">
+            <div class="head">
+                <form class="form-search" asp-action="Index" asp-controller="Owner" method="get">
+                    <input type="search" name="search-order-number" placeholder="Type here to search order number">
+                </form>
+                <a asp-action="Index" asp-controller="Owner" class="reload">Reload</a>
+                <a href="#">HELP</a>
+            </div>
+            <div class="body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Order Number</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if ((bool)ViewData["SearchOrderNumber"])
+                        {
+                            if (orderRecord != null)
+                            {
+                                foreach (var o in orderRecord)
+                                {
+                                    <tr>
+                                        <th scope="row">@o.OrderId</th>
+                                        <td>$@o.TotalPrice</td>
+                                        <td><a asp-action="OrderRecordDetail" asp-route-id="@o.OrderId" asp-controller="Owner">Detail</a></td>
+                                    </tr>
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (orderNumberSearch != null)
+                            {
+                                foreach (var o in orderNumberSearch)
+                                {
+                                    <tr>
+                                        <th scope="row">@o.OrderId</th>
+                                        <td>$@o.TotalPrice</td>
+                                        <td><a asp-action="OrderRecordDetail" asp-route-id="@o.OrderId" asp-controller="Owner">Detail</a></td>
+                                    </tr>
+                                }
+                            }
+                            <script>
+                                const sectionListSearch = document.querySelectorAll('.owner-content .item-section')
+                                sectionListSearch[2].classList.add('active')
+                                document.querySelector('.item-section.active').classList.remove('active')
+                            </script>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="item-section">
+        <div class="export-box">
+            <a class="export-btn" asp-action="Export" asp-controller="Owner">Download  <i class="fa-solid fa-file-export"></i></a>
+        </div>
+    </div>
+    <div class="item-section">
+        <div class="row" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <canvas id="myChart1" width="500px" height="300px"></canvas>
+            </div>
+
+        </div>
+        <div class="row" style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <canvas id="myChart2" width="500px" height="300px"></canvas>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+        <script>
+            const labels = [@Html.Raw(ViewData["labels"])];
+            const labels1 = [@Html.Raw(ViewData["labels1"])];
+
+            const data1 = {
+                labels: labels,
+                datasets: [{
+                    label: 'BooksNumber of books belonging to a category',
+                    borderWidth: 1,
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [@ViewData["totals"]],
+                }]
+            };
+            const data2 = {
+                labels: labels1,
+                datasets: [{
+                    label: 'Sale',
+                    borderWidth: 1,
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [@ViewData["totals1"]],
+                }]
+            };
+
+            const config1 = {
+                type: 'bar',
+                data: data1,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+
+
+
+                    }
+                }
+            };
+            const config2 = {
+                type: 'bar',
+                data: data2,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            };
+
+            const myChart1 = new Chart(
+                document.getElementById('myChart1'),
+                config1
+            );
+            const myChart2 = new Chart(
+                document.getElementById('myChart2'),
+                config2
+            );
+        </script>
+
+
+        @* <script>
+        const labels = [@Html.Raw(ViewData["labels"])];
+
+        const data = {
+        labels: labels,
+        datasets: [{
+        label: 'Sales Report',
+        backgroundColor: ['rgb(245,13,175)', 'rgb(24,142,7)', 'rgb(255, 99, 132)', 'rgb(255, 0, 0)'],
+        borderColor: 'rgb(255, 99, 132)',
+        data: [@ViewData["totals"]],
+        }]
+        };
+
+        const config1 = {
+        type: 'bar',
+        data: data,
+        options: {}
+        };
+        const config2 = {
+        type: 'pie',
+        data: data,
+        options: {
+        // animation: {
+        //   onComplete: function () {
+        //     loadImage();
+        //}
+        //}
+        }
+        };
+
+        const myChart1 = new Chart(
+        document.getElementById('myChart1'),
+        config1
+        );
+        const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+        );
+        //function loadImage() {
+        //  var myImage = myChart2.toBase64Image();
+        //document.getElementById("btnImg").href = myImage;
+        // }
+        </script> *@
+    </div>
+</div>
+
+<script src="~/js/owner.js" asp-append-version="true"></script>

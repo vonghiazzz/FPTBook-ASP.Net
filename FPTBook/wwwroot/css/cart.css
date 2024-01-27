@@ -1,0 +1,149 @@
+:root{
+    --white: #ffffff;
+    --main-color: #231786;
+    --text-color: #661294;
+    --background-option-1: #124A94;
+}
+
+.cart-content{
+    width: 76%;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+
+.cart-content .cart-list{
+    font-size: 1.2rem;
+}
+
+.cart-list .table{
+    
+}
+
+.cart-list tbody tr td:first-child{
+    display: flex;
+    justify-content: start;
+}
+
+.cart-list .item-img-box{
+    width: 20%;
+    height: 40%;
+    padding: 1rem 1rem 1rem 0;
+}
+
+.cart-list .item-img-box img{
+    width: 100%;
+    height: 100%;
+}
+
+.cart-list .item-content{
+    padding: 1rem 0;
+}
+
+.item-content .status .available{
+    color: green;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.item-content .status .unavailable{
+    color: red;
+    text-transform: uppercase;
+    font-weight: bolder;
+    display: none;
+}
+
+.item-content .status .available i,
+.item-content .status .unavailable i{
+    padding-right: 0.3rem;
+}
+
+.cart-list .item-qty{
+    padding-top: 1rem;
+}
+
+.cart-list .item-price{
+    padding-top: 1rem;
+}
+
+.cart-list .item-price::before{
+    content: "$";
+}
+
+.cart-list .remove-link{
+    color: var(--background-option-1);
+    font-size: 2rem;
+    transition: linear 0.2s;
+}
+
+.cart-list .remove-link:hover{
+    opacity: 0.7;
+}
+
+/* Cart action */
+.cart-action-box{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cart-action-box .action-cart-btn{
+    display: flex;
+}
+
+.action-cart-btn .return-shop{
+    background-color: var(--main-color);
+    width: 15rem;
+}
+
+.action-cart-btn a{
+    background-color: var(--background-option-1);
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    display: block;
+    height: 3rem;
+    line-height: 3rem;
+    width: 9rem;
+    text-align: center;
+    margin-left: 1rem;
+    border-radius: 9999px;
+    transition: linear 0.2s;
+    text-transform: uppercase;
+}
+
+.action-cart-btn a:hover{
+    opacity: 0.7;
+}
+
+.checkout-action{
+    width: 20rem;
+    text-align: center;
+}
+
+.checkout-action p{
+    font-size: 2rem;
+    border-bottom: 0.5px solid var(--main-color);
+}
+
+.checkout-action p b:before{
+    content: "$";
+}
+
+.checkout-action a{
+    background-color: var(--main-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    text-align: center;
+    height: 3rem;
+    line-height: 3rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border-radius: 9999px;
+    transition: linear 0.2s;
+}
+
+.checkout-action a:hover{
+    opacity: 0.7;
+}

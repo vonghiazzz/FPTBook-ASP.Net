@@ -1,0 +1,252 @@
+:root{
+    --white: #ffffff;
+    --main-color: #231786;
+    --text-color: #661294;
+    --background-option-1: #124A94;
+}
+
+.div-profile-page{
+    margin: 0;
+}
+
+.profile-content{
+    width: 75%;
+    margin: auto;
+    padding-bottom: 10rem;
+}
+
+.profile-content .title{
+}
+
+.profile-content .profile-tabs{
+    display: flex;
+    position: relative;
+    margin: 3rem 0;
+}
+
+.profile-tabs .line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    border-radius: 15px;
+    background-color: var(--main-color);
+    transition: all 0.2s ease;
+}
+
+.profile-tabs .profile-tab-item{
+    min-width: 80px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--main-color);
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 4px solid transparent;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-weight: bolder;
+}
+
+.profile-tabs .profile-tab-item:nth-child(2){
+    margin-left: 0.5rem;
+}
+
+.profile-tabs .profile-tab-item:hover{
+    opacity: 1;
+    background-color: rgba(35, 23, 134, 0.05);
+    border-color: rgba(35, 23, 134, 0.1);
+}
+
+.profile-tabs .profile-tab-item.active{
+    opacity: 1;
+}
+
+.profile-tab-content .profile-content-item.active{
+    display: block;
+}
+
+.profile-tab-content .profile-content-item{
+    display: none;
+}
+
+.profile-tab-content .profile-content-item:last-child{
+    position: relative;
+}
+
+.profile-content table{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Account information */
+.profile-content-item .card{
+    font-size: 1.2rem;
+}
+
+.profile-content-item .card .card-header{
+    font-weight: bolder;
+}
+
+.profile-content-item .card .card-body{
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-information label {
+    width: 5rem;
+}
+
+.form-information #name,
+.form-information #email,
+.form-information #address{
+    height: 3rem;
+    width: 20rem;
+    margin-left: 1rem;
+    padding-left: 0.5rem;
+    outline: none;
+}
+
+.form-information #email,
+.form-information #address{
+    margin-top: 1rem;
+}
+
+.form-information .change-info-btn{
+    width: 52%;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 3rem;
+    background-color: var(--background-option-1);
+    color: #fff;
+    font-weight: bolder;
+    border-radius: 0.25rem;
+    transition: linear 0.2s;
+    cursor: pointer;
+    display: block;
+}
+
+.form-information .change-info-btn:hover{
+    opacity: 0.7;
+}
+
+.form-information .change-info-btn-box{
+    display: flex;
+    justify-content: space-around;
+    width: 53%;
+    height: 3rem;
+    margin: 1rem auto;
+    display: none;
+}
+
+.change-info-btn-box .confirm-change-btn{
+    width: 10rem;
+    background-color: var(--background-option-1);
+    color: #fff;
+    font-weight: bolder;
+    border-radius: 0.25rem;
+    border: none;
+    transition: linear 0.2s;
+}
+
+.change-info-btn-box .cancel-btn{
+    line-height: 3rem;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: linear 0.2s;
+}
+
+.change-info-btn-box .confirm-change-btn:hover,
+.change-info-btn-box .cancel-btn:hover {
+    opacity: 0.7;
+}
+
+.card-body .change-pwd-btn{
+    background-color: var(--background-option-1);
+    height: 3rem;
+    line-height: 3rem;
+    width: 12rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    color: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: linear 0.2s;
+}
+
+.card-body .change-pwd-btn:hover{
+    opacity: 0.7;
+}
+
+.change-pwd-form{
+    position: absolute;
+    top: -60rem;
+    right: 10rem;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 5rem;
+    border-radius: 0.75rem;
+    transition: linear 0.2s;
+}
+
+.change-pwd-form form{
+    width: 20rem;
+    font-size: 1.2rem;
+}
+
+.change-pwd-form .form-group:not(:first-child){
+    margin-top: 1rem;
+}
+
+.change-pwd-form .form-group input{
+    width: 100%;
+    height: 3rem;
+    padding-left: 1rem;
+    border-radius: 0.25rem;
+    outline: none;
+}
+
+.change-pwd-btn-box{
+    display: flex;
+    justify-content: space-around;
+    height: 3rem;
+    margin-top: 1rem;
+}
+
+.change-pwd-btn-box .confirm-change-pwd-btn{
+    height: 100%;
+    width: 81%;
+    font-weight: bolder;
+    border-radius: 0.25rem;
+    background-color: var(--background-option-1);
+    color: #fff;
+    transition: linear 0.2s;
+    border: none;
+}
+
+.change-pwd-btn-box .change-pwd-cancel-btn{
+    line-height: 3rem;
+    font-weight: bolder;
+    transition: linear 0.2s;
+    cursor: pointer;
+}
+
+.change-pwd-btn-box .confirm-change-pwd-btn:hover,
+.change-pwd-btn-box .change-pwd-cancel-btn:hover{
+    opacity: 0.7;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+}

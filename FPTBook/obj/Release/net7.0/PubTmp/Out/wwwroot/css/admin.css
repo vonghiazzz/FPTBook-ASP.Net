@@ -1,0 +1,264 @@
+:root{
+    --white: #ffffff;
+    --main-color: #231786;
+    --text-color: #661294;
+    --background-option-1: #124A94;
+}
+
+.admin-content{
+    margin-bottom: 5rem;
+    display: flex;
+}
+
+.admin-content hr{
+    background-color: #fff;
+    opacity: 1;
+}
+
+.admin-content .side-bar{
+    background-color: var(--main-color);
+    width: 25%;
+    height: 70rem;
+    text-align: center;
+    color: #fff;
+}
+
+.side-bar .user .user-avatar{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+
+.side-bar .user .user-name{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.side-bar .side-nav{
+    margin-top: 10rem;
+}
+
+.side-nav ul{
+    padding: 0;
+}
+
+.side-nav .nav-item{
+    list-style: none;
+    font-size: 2rem;
+    margin: 5rem auto;
+    font-weight: bolder;
+    position: relative;
+    cursor: pointer;
+    transition: linear 0.3s;
+}
+
+.side-nav .nav-item i{
+    margin-right: 1rem;
+}
+
+.side-nav .nav-item:hover{
+    opacity: 0.7;
+}
+
+/* item-section */
+.item-section{
+    width: 75rem;
+    margin: 0 auto;
+    display:none
+}
+
+.item-section.active{
+    display: block;
+}
+
+.customer-display .head input,
+.owner-display .head input,
+.genre-request-display .head input,
+.genre-display .head input{
+    width: 20rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    outline: none;
+    border: 1px solid var(--main-color);
+    border-radius: 9999px;
+    padding-left: 1rem;
+}
+
+.customer-display .body,
+.owner-display .body,
+.genre-request-display .body,
+.genre-display .body{
+    margin-top: 3rem;
+}
+
+.customer-display table,
+.owner-display table,
+.genre-request-display table,
+.genre-display table{
+    font-size: 1.2rem;
+}
+
+.customer-display .table a,
+.owner-display .table a,
+.genre-request-display .action a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--main-color);
+    transition: linear 0.3s;
+}
+
+.customer-display .table a:hover,
+.owner-display .table a:hover,
+.genre-request-display .action a:hover{
+    opacity: 0.7;
+}
+
+.customer-display .table .detail p,
+.owner-display .table .detail p{
+    cursor: pointer;
+    color: var(--main-color);
+    font-weight: bolder;
+    transition: linear 0.3s;
+    position: relative;
+}
+
+.customer-display .table .detail p:hover,
+.owner-display .table .detail p:hover{
+    opacity: 0.7;
+}
+
+.customer-detail,
+.owner-detail{
+    border: 1px solid var(--main-color);
+    width: 35rem;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+.customer-detail hr,
+.owner-detail hr{
+    background-color: #000; 
+    width: 100%;
+}
+
+.customer-detail td,
+.owner-detail td{
+    padding-left: 5rem;
+}
+
+.customer-detail .back,
+.owner-detail .back{
+    margin-left: 30rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#overlay-customer,
+#overlay-owner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+}
+
+/* item genre management section */
+.genre-display .head{
+    display: flex;
+    justify-content: space-around;
+}
+
+.genre-display .add-btn{
+    margin-right: 45rem;
+    background-color: var(--main-color);
+    width: 10rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    border-radius: 9999px;
+    font-size: 1.2rem;
+    transition: linear 0.3s;
+    cursor: pointer;
+}
+
+.genre-display .add-btn:hover{
+    opacity: 0.7;
+}
+
+.genre-display .action a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--main-color);
+    transition: linear 0.3s;
+}
+
+.genre-display .action a:hover{
+    opacity: 0.7;
+}
+
+/* genre create */
+.genre-create{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.genre-create form{
+    display: flex;
+}
+
+.genre-create form input{
+    width: 50rem;
+    height: 3rem;
+    border: 1px solid var(--main-color);
+    outline: none;
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+    border-right: none;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.genre-create form button{
+    width: 8rem;
+    height: 3rem;
+    margin-left: -1rem;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-left: none;
+    border: 1px solid var(--main-color);
+    font-size: 1.2rem;
+    background-color: #231786;
+    color: #fff;
+    transition: linear 0.3s;
+    font-weight: bolder;
+}
+
+.genre-create form button:hover{
+    opacity: 0.7;
+}
+
+.genre-create .back-btn{
+    margin-right: 55rem;
+    font-size: 3rem;
+    color: var(--main-color);
+    transition: linear 0.3s;
+}
+
+.genre-create .back-btn:hover{
+    opacity: 0.7;
+}

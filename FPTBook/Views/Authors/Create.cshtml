@@ -1,0 +1,76 @@
+﻿@model FPTBook.Models.Author
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    .back-to-list a{
+        display: block;
+        text-align: center;
+    }
+</style>
+
+<h1>Create</h1>
+
+<h4>Author</h4>
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group pt-2">
+                <img id="imagePreview" src="~/images/default-thumbnail.jpg" style="width: 60%; height: 70%; object-fit: cover" />
+            </div>
+            <div class="form-group pt-2 form-group-file">
+                <label asp-for="Picture" class="control-label"></label>
+                <input id="imageInput" asp-for="ImageFile" class="form-control" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="back-to-list">
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script>
+    const imageInput = document.getElementById('imageInput');
+    const imagePreview = document.getElementById('imagePreview');
+
+    // Add an event listener to the input element
+    imageInput.addEventListener('change', function () {
+        // Check if a file has been selected
+        if (this.files && this.files[0]) {
+            const reader = new FileReader();
+
+            // When the file is loaded, set the image source to the selected file
+            reader.onload = function (e) {
+                imagePreview.src = e.target.result;
+            };
+
+            // Read the selected file as a data URL
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

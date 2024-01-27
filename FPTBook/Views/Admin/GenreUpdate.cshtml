@@ -1,0 +1,42 @@
+﻿<link rel="stylesheet" href="~/css/admin.css" asp-append-version="true">
+
+@{
+    var genreItem = ViewData["GenreItem"] as Genre;
+}
+
+<hr class="div-admin">
+
+<div class="admin-content">
+    <div class="side-bar">
+        <div class="user">
+            <img class="user-avatar" src="~/uploads/@ViewData["AdminPicture"]" alt="">
+            <div class="user-name">
+                <p>@ViewData["AdminName"]</p>
+            </div>
+        </div>
+        <hr>
+        <div class="side-nav">
+            <ul>
+                <li class="nav-item"><i class="fa-solid fa-user"></i>Customer Management</li>
+                <li class="nav-item"><i class="fa-solid fa-user"></i>Owner Management</li>
+                <li class="nav-item"><i class="fa-solid fa-circle-check"></i>Genre Approval</li>
+                <li class="nav-item"><i class="fa-solid fa-list-check"></i>Genre Management</li>
+            </ul>
+        </div>
+    </div>
+
+    
+    
+   
+    <div class="item-section active">
+        <div class="genre-create" style="display:flex">
+            <a class="back-btn" href="#"><i class="fa-solid fa-delete-left"></i></a>
+            <form asp-action="UpdateGenre" asp-controller="Admin" method="post">
+                <div class="form-group">
+                    <input type="text" name="GenreName" value="@genreItem.Name">
+                </div>
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+</div>

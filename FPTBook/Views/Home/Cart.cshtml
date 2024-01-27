@@ -1,0 +1,80 @@
+﻿<link rel="stylesheet" href="~/css/cart.css" asp-append-version="true">
+
+@model IEnumerable<dynamic>
+@{
+    //var cart = ViewData["cartDetail"] as Enumerable;
+
+    var Total = 0;
+    foreach (var data in Model)
+    {
+        var getTotal = data.Product.Price * data.Cart.Quantity;
+        Total += getTotal;
+    }
+}
+
+<div class="cart-content">
+    <div class="title"><h1>Shopping Cart</h1></div>
+    <div class="cart-list">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Price</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var c in Model)
+                {
+
+                    var price = c.Cart.Quantity * c.Product.Price;
+                    <tr>
+                        <td>
+                            <div class="item-img-box"><img src="~/uploads/@c.Product.Picture" alt=""></div>
+                            <div class="item-content">
+                                <h3 class="item-title">@c.Product.Name</h3>
+                                <p class="-item-author">@c.Author.Name</p>
+                                <p class="item-format">Hardcover</p>
+                                <div class="status">
+                                    @if (c.Product.Status == true)
+                                    {
+                                        <p class="available"><i class="fa-solid fa-circle-check"></i>Available</p>
+                                    }
+                                    else
+                                    {
+                                        <p class="unavailable"><i class="fa-solid fa-exclamation"></i>Unavailable</p>
+                                    }
+
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <form method="get" asp-action="UpdateQty" asp-route-id="@c.Cart.Id">
+                                <div class="item-qty">
+                                    <input name="inputQty" type="number" value="@c.Cart.Quantity" min="1" max="9999" onchange="this.form.submit()">
+                                </div>
+                            </form>
+                        </td>
+                        <td><p class="item-price">@price</p></td>
+                        <td><a class="remove-link" asp-action="DeleteCart" asp-route-id="@c.Cart.Id"><i class="fa-solid fa-trash"></i></a></td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="cart-action-box">
+        <div class="action-cart-btn">
+            <a href="#" class="return-shop">Continue shopping</a>
+            <a href="#">Empty cart</a>
+        </div>
+        <div class="checkout-action">
+            <p name="total">Total: <b>@Total</b></p>
+            <a asp-action="Checkout">Checkout</a>
+        </div>
+    </div>
+</div>
+
+@* <script src="~/js/cart.js" asp-append-version="true"></script> *@

@@ -1,0 +1,75 @@
+﻿@{
+    var orderDetail = ViewData["OrderDetail"] as dynamic;
+    var orderMoredetail = ViewData["OrderMoreDetail"] as IEnumerable<dynamic>;
+}
+
+<hr class="div-owner">
+
+<link rel="stylesheet" href="~/css/owner.css" asp-append-version="true">
+<div class="owner-content">
+    <div class="item-section active">
+        <div class="order-detail" style="display:block">
+            <div class="head">
+                <a class="detail-back-btn" asp-action="Index" asp-controller="Owner"><i class="fa-solid fa-delete-left"></i></a>
+            </div>
+            <div class="product-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (orderMoredetail != null)
+                        {
+                            foreach (var o in orderMoredetail)
+                            {
+                                <tr>
+                                    <td><img src="~/uploads/@o.Product.Picture" alt=""></td>
+                                    <td>@o.OrderDetail.Quantity</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="detail-info">
+                <table>
+                    @if (orderDetail != null)
+                    {
+                    <tbody>
+                        
+                            <tr>
+                                <th>Order Number:</th>
+                                <td>@orderDetail.OrderId</td>
+                            </tr>
+                            <tr>
+                                <th>Total:</th>
+                                <td>$@orderDetail.TotalPrice</td>
+                            </tr>
+                            <tr>
+                                <th>Customer Name:</th>
+                                <td>@orderDetail.Customer.Name</td>
+                            </tr>
+                            <tr>
+                                <th>Email:</th>
+                                <td>@orderDetail.Customer.Email</td>
+                            </tr>
+                            <tr>
+                                <th>Address:</th>
+                                <td>@orderDetail.Customer.Address</td>
+                            </tr>
+
+                            </tbody>
+                        <tbody class="action-order">
+                        <td><a class="confirm-order" asp-action="ConfirmOrder" asp-route-id="@ViewData["OrderId"]" asp-controller="Owner">Confirm</a></td>
+                        <td><a asp-action="Index" asp-controller="Owner"><p class="cancel-order">Cancel</p></a></td>
+                        </tbody>
+                        }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

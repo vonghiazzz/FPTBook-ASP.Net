@@ -1,0 +1,156 @@
+﻿<link rel="stylesheet" href="~/css/book-detail.css" asp-append-version="true">
+
+@{
+    var pd = ViewData["Detail"] as dynamic;
+    var related = ViewData["RelatedBook"] as List<Product>;
+}
+
+<div class="book-detail-content">
+    <div class="main-content">
+        <div class="book-detail-img">
+            @if(pd != null)
+            {
+                <img src="~/uploads/@pd.Product.Picture" alt="">
+            }
+            else
+            {
+                <img src="~/images/default-thumbnail.jpg" alt="">
+            }
+        </div>
+        <div class="book-detail-information">
+            @if(pd != null)
+            {
+                <h3 class="title">@pd.Product.Name</h3>
+                <p class="author">@pd.Author.Name</p>
+                <p class="owner"><a href="#">@ViewData["OwnerName"]</a> (Owner)</p>
+                <div class="format-box">
+                    <p class="format-type">Hardcover</p>
+                    <p class="price">&#36;@pd.Product.Price</p>
+                </div>
+                <div class="status">
+                    
+                    @if (pd.Product.Status == true)
+                    {
+                        <p class="available" style="display:block"><i class="fa-solid fa-circle-check"></i>Available</p>
+                        <p class="unavailable" style="display:none"><i class="fa-solid fa-exclamation"></i>Unavailable</p>
+                    }
+                    else{
+                        <p class="available" style="display:none"><i class="fa-solid fa-circle-check"></i>Available</p>
+                        <p class="unavailable" style="display:block"><i class="fa-solid fa-exclamation"></i>Unavailable</p>
+                    }
+                </div>
+            }
+            <div class="action-box">
+                @* <button type="submit" class="add-cart">Add to cart</button> *@
+                @* <button type="submit" class="add-wishlist" href="#">Add to wishlist</button> *@
+
+                <a class="add-cart" asp-action="AddCart" asp-route-id="@pd.Product.Id">Add to cart</a>
+                <a class="add-wishlist" href="#">Add to wishlist</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="more-info">
+        <div class="tabs">
+            <div class="tab-item active">Description</div>
+            <div class="tab-item">Book Details</div>
+            <div class="tab-item">About Author</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="tab-content">
+            <div class="tab-pane active">
+                @if(pd != null)
+                {
+                    <p>
+                        @pd.Product.Description
+                    </p>
+                }
+            </div>
+            <div class="tab-pane">
+                <table>
+                    <tbody>
+                        @if(pd != null)
+                        {
+                            <tr>
+                                <th>Format:</th>
+                                <td>Hardcover</td>
+                            </tr>
+                            <tr>
+                                <th>Publisher:</th>
+                                <td>@pd.Publisher.Name</td>
+                            </tr>
+                            <tr>
+                                <th>Publish Date:</th>
+                                <td>@pd.Product.PublishDate</td>
+                            </tr>
+                            <tr>
+                                <th>Pages:</th>
+                                <td>@pd.Product.PageNumber</td>
+                            </tr>
+                            <tr>
+                                <th>Language:</th>
+                                <td>@pd.Product.Language</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane">
+                @if(pd != null)
+                {
+                    <div class="author-img-box">
+                        <img src="~/uploads/@pd.Author.Picture" alt="">
+                    </div>
+                    <div class="author-detail-info">
+                        <p>
+                            @pd.Author.Description
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <div class="author-img-box">
+                        <img src="~/images/default-thumbnail.jpg" alt="">
+                    </div>
+                    <div class="author-detail-info">
+                        <p>
+                            Nothing
+                        </p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="related-book-box">
+    <div class="section-new">
+        <div class="section-title">
+            <h3 class="title">Related book</h3>
+        </div>
+        <div class="product-list-new">
+            @if(related != null)
+            {
+                foreach(var r in related)
+                {
+                    <div class="product-item"><a asp-action="BookDetail" asp-route-id="@r.Id"><img src="~/uploads/@r.Picture" alt=""></a></div>
+                    @* <div class="product-item"><a asp-action="BookDetail" asp-route-id="@r.Id"><img src="~/uploads/@r.Picture" alt=""></a></div>
+                    <div class="product-item"><a asp-action="BookDetail" asp-route-id="@r.Id"><img src="~/uploads/@r.Picture" alt=""></a></div>
+                    <div class="product-item"><a asp-action="BookDetail" asp-route-id="@r.Id"><img src="~/uploads/@r.Picture" alt=""></a></div>
+                    <div class="product-item"><a asp-action="BookDetail" asp-route-id="@r.Id"><img src="~/uploads/@r.Picture" alt=""></a></div>
+                    <div class="product-item"><a asp-action="BookDetail" asp-route-id="@r.Id"><img src="~/uploads/@r.Picture" alt=""></a></div>
+                    <div class="product-item"><a asp-action="BookDetail" asp-route-id="@r.Id"><img src="~/uploads/@r.Picture" alt=""></a></div>
+                    <div class="product-item"><a asp-action="BookDetail" asp-route-id="@r.Id"><img src="~/uploads/@r.Picture" alt=""></a></div> *@
+                }
+            }
+            else
+            {
+                <div class="product-item"><a href="#"><img src="~/images/default-thumbnail.jpg" alt=""></a></div>
+            }
+        </div>
+        <div class="prev"><i class="fa-solid fa-circle-arrow-left"></i></div>
+        <div class="next"><i class="fa-solid fa-circle-arrow-right"></i></div>
+    </div>
+</div>
+<script src="~/js/book-detail.js" asp-append-version="true"></script>

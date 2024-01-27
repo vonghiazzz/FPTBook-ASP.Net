@@ -1,0 +1,74 @@
+﻿<link rel="stylesheet" href="~/css/display-book.css" asp-append-version="true">
+
+@* @model IEnumerable<FPTBook.Models.Product> *@
+@model IEnumerable<dynamic>
+<hr class="div-display-page">
+
+@if (ViewData["DisplayGenre"] != null)
+{
+
+    <div class="display-book-content">
+        <div class="title">
+            @if (ViewData["GenreName"] != null)
+            {
+                <h3>@ViewData["GenreName"]</h3>
+            }
+        </div>
+        <div class="list-book">
+            @foreach (var product in Model)
+            {
+                <div class="book-item">
+                    <a asp-action="BookDetail" asp-route-id="@product.Product.Id"><img src="~/uploads/@product.Product.Picture" alt=""></a>
+                    <div class="body-item">
+                        <p class="book-name">@product.Product.Name</p>
+                        <p class="book-author">@product.Author.Name</p>
+                        <p class="book-price">&#36;@product.Product.Price</p>
+                    </div>
+                    <div class="add-cart">
+                        <a asp-action="AddCart" asp-route-id="@product.Product.Id">Add cart</a>
+                    </div>
+                </div>
+
+            }
+            <div class="clear"></div>
+        </div>
+        <div class="pagination-box">
+            <ul class="list-page">
+            </ul>
+        </div>
+    </div>
+}
+
+@if (ViewData["DisplaySearch"] != null)
+{
+    <div class="display-book-content">
+        <div class="title">
+            @if (ViewData["SearchTerm"] != null)
+            {
+                <h3>Search for: @ViewData["SearchTerm"]</h3>
+            }
+        </div>
+        <div class="list-book">
+            @foreach (var product in Model)
+            {
+                <div class="book-item">
+                    <a href="#"><img src="~/uploads/@product.Product.Picture" alt=""></a>
+                    <div class="body-item">
+                        <p class="book-name">@product.Product.Name</p>
+                        <p class="book-author">@product.Author.Name</p>
+                        <p class="book-price">&#36;@product.Product.Price</p>
+                    </div>
+                    <div class="add-cart">
+                        <a asp-action="AddCart" asp-route-id="@product.Product.Id">Add cart</a>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="pagination-box">
+            <ul class="list-page">
+            </ul>
+        </div>
+    </div>
+}
+
+<script src="~/js/display-book.js" asp-append-version="true"></script>

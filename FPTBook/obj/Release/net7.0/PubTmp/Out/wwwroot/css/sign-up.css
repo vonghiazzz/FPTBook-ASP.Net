@@ -1,0 +1,111 @@
+:root{
+    --white: #ffffff;
+    --main-color: #231786;
+    --text-color: #661294;
+    --background-option-1: #124A94;
+}
+
+
+.sign-up-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+    border-top: 0.5px solid var(--main-color);
+}
+
+.sign-up-box .title{
+    padding-top: 2rem;
+}
+
+.sign-up-box .title h3{
+    font-size: 2rem;
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+}
+
+.form-box{
+    margin-top: 2rem;
+    border: 0.2rem solid var(--main-color);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.form-box .pwd-box,
+.form-box .confirm-pwd-box,
+.form-box .name-box,
+.form-box .address-box{
+    margin-top: 2rem;
+}
+
+.form-box .email-box input, 
+.form-box .pwd-box input,
+.form-box .confirm-pwd-box input,
+.form-box .name-box input,
+.form-box .address-box input{
+    width: 24rem;
+    height: 3rem;
+    padding-left: 1rem;
+    border-radius: 9999px;
+    font-size: 1.2rem;
+    outline: none;
+    border: 1px solid var(--main-color);
+}
+
+.form-box .sign-up-btn{
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    border-radius: 9999px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: var(--main-color);
+    font-weight: bolder;
+    transition: linear 0.2s;
+}
+
+.form-box .sign-up-btn:hover{
+    background-color: #fff;
+    color: var(--main-color);
+}
+
+.form-box .sign-in-link{
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    background-color: var(--background-option-1);
+    border-radius: 9999px;
+    transition: linear 0.2s;
+}
+
+.form-box .sign-in-link:hover{
+    opacity: 0.7;
+}
+
+.form-box .sign-in-link a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    display: block;
+}
+
+.form-box .form-select{
+    width: 100%;
+    height: 3rem;
+    border-radius: 9999px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-top: 1rem;
+}
+
+.form-box .form-check-term{
+    padding-left: 1rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.form-box .form-check-term a{
+    color: #000;
+}

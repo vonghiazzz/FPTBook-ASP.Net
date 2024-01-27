@@ -1,0 +1,125 @@
+﻿@using FPTBook.Data;
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<ApplicationUser> SignInManager
+@{
+    ViewData["Title"] = "Home Page";
+    var bestSeller = ViewData["BestSeller"] as IEnumerable<dynamic>;
+    var products = ViewData["NewRelease"] as IEnumerable<Product>;
+}
+
+<div class="slider">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/Bkshop_Iliad_HeroDesktop.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/DevilMakesThree_Bookshop_2048x600.webp" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="section-new">
+        <div class="section-title">
+            <h3 class="title">New Releases This Week</h3>
+            <a href="#">View all</a>
+        </div>
+        <div class="product-list-new">
+            @if(products != null)
+            {
+                foreach (var p in products)
+                {
+                    <div class="product-item"><a asp-action="BookDetail" asp-route-id="@p.Id"><img src="~/uploads/@p.Picture" alt=""></a></div>
+                }
+            }
+        </div>
+        <div class="prev"><i class="fa-solid fa-circle-arrow-left"></i></div>
+        <div class="next"><i class="fa-solid fa-circle-arrow-right"></i></div>
+    </div>
+
+    <div class="section-best-seller">
+        <div class="section-title">
+            <h3 class="title">Best Sellers</h3>
+            <a href="#">View all</a>
+        </div>
+        <div class="product-list-best">
+            @if(bestSeller != null)
+            {
+                foreach(var p in bestSeller)
+                {
+                    <div class="product-item"><a asp-action="BookDetail" asp-route-id="@p.Id"><img src="~/uploads/@p.Picture" alt=""></a></div>
+                }
+            }
+        </div>
+        <div class="prev"><i class="fa-solid fa-circle-arrow-left"></i></div>
+        <div class="next"><i class="fa-solid fa-circle-arrow-right"></i></div>
+    </div>
+
+    <div class="banner-content">
+        <a href="#"><img src="~/images/27593_BB_B_OMP_09-29.jpg" alt=""></a>
+    </div>
+
+    <div class="slick-slider">
+        <div class="slick-item">
+            <div class="img"><img src="~/images/lf (1).webp" alt=""></div>
+            <div class="content-item">
+                <p>Return to KingsBridge</p>
+            </div>
+        </div>
+        <div class="slick-item">
+            <div class="img"><img src="~/images/lf (2).webp" alt=""></div>
+            <div class="content-item">
+                <p>
+                    Family secrets revealed... our loved ones are <br>often all too  human and as such,<br>
+                    all too flawed
+                </p>
+            </div>
+        </div>
+        <div class="slick-item">
+            <div class="img"><img src="~/images/lf (3).webp" alt=""></div>
+            <div class="content-item">
+                <p>Embrace your appetite for reading with this <br>delicious book</p>
+            </div>
+        </div>
+        <div class="slick-item">
+            <div class="img"><img src="~/images/lf (4).webp" alt=""></div>
+            <div class="content-item">
+                <p>
+                    From small town alabama to 1980s <br>
+                    philadelphia: a portrait of one family's fight <br>for survival
+                </p>
+            </div>
+        </div>
+        <div class="slick-item">
+            <img src="~/images/lf (5).webp" alt="">
+            <div class="content-item">
+                <p>Our most anticipated books this october</p>
+            </div>
+        </div>
+        <div class="slick-item">
+            <img src="~/images/lf.webp" alt="">
+            <div class="content-item">
+                <p>The shades of magic series continues</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="banner-bottom mb-2">
+    <div class="banner-img"><img src="~/images/2023-09-Hispanic-Heritage-Month-EN.webp" alt=""></div>
+    <div class="banner-img"><img src="~/images/Trending-Tiles.webp" alt=""></div>
+    <div class="banner-img"><img src="~/images/Prison-Book-Program-tile.webp" alt=""></div>
+</div>
+
+@if (!SignInManager.IsSignedIn(User))
+{
+    <div class="join-app">
+        <div class="content">
+            <h3 class="title">Sign up for our Newsletter</h3>
+            <p>Tell us what books you love.</p>
+        </div>
+        <div class="join-btn"><a asp-area="Identity" asp-page="/Account/Register">Sign up</a></div>
+    </div>
+}

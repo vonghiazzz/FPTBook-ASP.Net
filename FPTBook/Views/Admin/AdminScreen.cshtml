@@ -1,0 +1,246 @@
+﻿<link rel="stylesheet" href="~/css/admin.css" asp-append-version="true">
+
+@{
+    var customerList = ViewData["CustomerList"] as IEnumerable<dynamic>;
+    var customerListSearch = ViewData["CustomerListSearch"] as IEnumerable<dynamic>;
+    var ownerListSearch = ViewData["OwnerListSearch"] as IEnumerable<dynamic>;
+    var ownerList = ViewData["OwnerList"] as IEnumerable<dynamic>;
+    var newGenre = ViewData["NewGenre"] as IEnumerable<dynamic>;
+    var genreList = ViewData["GenreList"] as IEnumerable<Genre>;
+    string userPassword = ViewData["UserPassword"] as string;
+}
+
+<style>
+    .customer-display .head{
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
+
+<hr class="div-admin">
+
+      <div class="admin-content">
+        <div class="side-bar">
+            <div class="user">
+                <img class="user-avatar" src="~/uploads/@ViewData["AdminPicture"]" alt="">
+                <div class="user-name">
+                    <p>@ViewData["AdminName"]</p>
+                </div>
+            </div>
+            <hr>
+            <div class="side-nav">
+                <ul>
+                    <li class="nav-item"><i class="fa-solid fa-user"></i>Customer Management</li>
+                    <li class="nav-item"><i class="fa-solid fa-user"></i>Owner Management</li>
+                    <li class="nav-item"><i class="fa-solid fa-circle-check"></i>Genre Approval</li>
+                    <li class="nav-item"><i class="fa-solid fa-list-check"></i>Genre Management</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="item-section active">
+            <div class="customer-display">
+                <div class="head">
+                <form method="get" asp-action="Index" asp-controller="Admin">
+                        <div class="form-group"><input name="search-term" type="text" placeholder="Type here to search customer"></div>
+                </form>
+                
+                <p>@userPassword</p>
+                
+                </div>
+                <div class="body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        @if ((bool) ViewData["CustomerSearch"])
+                        {
+                            @if (customerList != null)
+                            {
+                                foreach (var c in customerList)
+                                {
+                                    <tr>
+                                        <td>@c.Name</td>
+                                        <td>@c.Email</td>
+                                        <td>@c.Address</td>
+                                        <td class="detail"><a href="">Reset</a></td>
+                                    </tr>
+                                }
+                            }
+                        }
+                        else
+                        {
+                            @if (customerListSearch != null)
+                            {
+                                foreach (var c in customerListSearch)
+                                {
+                                    <tr>
+                                        <td>@c.Customer.Name</td>
+                                        <td>@c.Customer.Email</td>
+                                        <td>@c.Customer.Address</td>
+                                        <td class="detail"><a href="">Reset</a></td>
+                                    </tr>
+                                }
+                            }
+                        }
+                    </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+        <div class="item-section">
+            <div class="owner-display">
+                <div class="head">
+                    <form method="get" asp-action="Index" asp-controller="Admin">
+                        <div class="form-group"><input name="search-term-owner" type="text" placeholder="Type here to search owner"></div>
+                    </form>
+                </div>
+                <div class="body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        @if ((bool)ViewData["OwnerSearch"])
+                        {
+                            if (ownerList != null)
+                            {
+                                foreach (var o in ownerList)
+                                {
+                                    <tr>
+                                        <td>@o.Name</td>
+                                        <td>@o.Email</td>
+                                        <td>@o.Address</td>
+                                        <td class="detail"><a asp-action="ResetUserPassword" asp-controller="Admin" asp-route-id="@o.Id">Reset</a></td>
+                                    </tr>
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (ownerListSearch != null)
+                            {
+                                foreach (var o in ownerListSearch)
+                                {
+                                    <tr>
+                                        <td>@o.Owner.Name</td>
+                                        <td>@o.Owner.Email</td>
+                                        <td>@o.Owner.Address</td>
+                                        <td class="detail"><a href="#">Reset</a></td>
+                                    </tr>
+                                }
+                            }
+
+                            <script>
+                                const adminListSearch = document.querySelectorAll('.admin-content .item-section')
+                                adminListSearch[1].classList.add('active')
+                                document.querySelector('.item-section.active').classList.remove('active')
+                            </script>
+                        }
+                    </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+        <div class="item-section">
+            <div class="genre-request-display">
+                <div class="head">
+                    <form action="">
+                        <div class="form-group"><input type="text" placeholder="Type here to search owner"></div>
+                    </form>
+                    <div class="body">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Owner Name</th>
+                                <th scope="col">Owner Email</th>
+                                <th scope="col">New Genre</th>
+                                <th scope="col">Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            @if(newGenre != null)
+                            {
+                                foreach(var n in newGenre)
+                                {
+                                    <tr>
+                                        <td>@n.Owner.Name</td>
+                                        <td>@n.Owner.Email</td>
+                                        <td>@n.NewGenres.Name</td>
+                                        <td class="action action-genre">
+                                            <a asp-action="GenreAccept" asp-route-id="@n.NewGenres.Id" asp-controller="Admin">Accept</a>
+                                            <a asp-action="RejectGenre" asp-route-id="@n.NewGenres.Id" asp-controller="Admin">Reject</a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item-section">
+            <div class="genre-display">
+                <div class="head">
+                    <div class="add-btn">Create genre</div>
+                    <form action="">
+                        <div class="form-group"><input type="text" placeholder="Type here to search genre"></div>
+                    </form>
+                </div>
+                <div class="body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        @if(genreList != null)
+                        {
+                            foreach(var g in genreList)
+                            {
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>@g.Name</td>
+                                    <td class="action action-genre">
+                                        <a asp-action="UpdateGenre" asp-controller="Admin" asp-route-id="@g.Id">Update</a>
+                                        <a class="delete" asp-action="DeleteGenre" asp-controller="Admin" asp-route-id="@g.Id">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                      </table>
+                </div>
+            </div>
+            <div class="genre-create">
+                <a class="back-btn" href="#"><i class="fa-solid fa-delete-left"></i></a>
+                <form asp-action="CreateGenre" asp-controller="Admin" method="post">
+                    <div class="form-group">
+                        <input type="text" name="GenreName" placeholder="Type the genre">
+                    </div>
+                    <button type="submit">Create</button>
+                </form>
+            </div>
+        </div>
+      </div>
+<script>
+    document.querySelector('#see-password-change').onclick = function () {
+        alert(@userPassword+"")
+    }
+</script>
+<script src="~/js/admin.js" asp-append-version="true"></script>

@@ -1,0 +1,65 @@
+:root{
+    --white: #ffffff;
+    --main-color: #231786;
+    --text-color: #661294;
+    --background-option-1: #124A94;
+}
+
+.help-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.help-content .title{
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #fff;
+    background-color: var(--main-color);
+    width: 50rem;
+    text-align: center;
+    border-radius: 0.75rem;
+}
+
+.help-content .help-body{
+    margin-top: 5rem;
+    display: flex;
+    
+    width: 80%;
+}
+
+.help-body .help-item{
+    width: calc(100%/3);
+    border: 1px solid var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 14rem;
+    
+    font-size: 2.5rem;
+    font-weight: bolder;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.4s;
+
+}
+
+.help-body .help-item:hover{
+    background-color: var(--main-color);
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: var(--main-color) 0px 5px 15px;
+}
+
+.help-body .help-item:nth-child(2){
+    margin: auto 3rem;
+}
+
+.help-body .help-item p{
+    margin-bottom: 0;
+    text-transform: uppercase;
+}

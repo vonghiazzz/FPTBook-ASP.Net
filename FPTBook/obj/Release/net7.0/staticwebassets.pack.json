@@ -1,0 +1,605 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\FPTBook.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FPTBook.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\css\\admin.css",
+      "PackagePath": "staticwebassets\\css\\admin.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\css\\book-detail.css",
+      "PackagePath": "staticwebassets\\css\\book-detail.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\css\\cart.css",
+      "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\css\\checkout.css",
+      "PackagePath": "staticwebassets\\css\\checkout.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\css\\display-book.css",
+      "PackagePath": "staticwebassets\\css\\display-book.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\css\\help.css",
+      "PackagePath": "staticwebassets\\css\\help.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\css\\owner.css",
+      "PackagePath": "staticwebassets\\css\\owner.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\css\\profile.css",
+      "PackagePath": "staticwebassets\\css\\profile.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\css\\sign-in.css",
+      "PackagePath": "staticwebassets\\css\\sign-in.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\css\\sign-up.css",
+      "PackagePath": "staticwebassets\\css\\sign-up.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\2023-09-Hispanic-Heritage-Month-EN.webp",
+      "PackagePath": "staticwebassets\\images\\2023-09-Hispanic-Heritage-Month-EN.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\27593_BB_B_OMP_09-29.jpg",
+      "PackagePath": "staticwebassets\\images\\27593_BB_B_OMP_09-29.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\9781250776518.webp",
+      "PackagePath": "staticwebassets\\images\\9781250776518.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\Ben-Fountain.webp",
+      "PackagePath": "staticwebassets\\images\\Ben-Fountain.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\Bkshop_Iliad_HeroDesktop.webp",
+      "PackagePath": "staticwebassets\\images\\Bkshop_Iliad_HeroDesktop.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\DevilMakesThree_Bookshop_2048x600.webp",
+      "PackagePath": "staticwebassets\\images\\DevilMakesThree_Bookshop_2048x600.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\Prison-Book-Program-tile.webp",
+      "PackagePath": "staticwebassets\\images\\Prison-Book-Program-tile.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\Trending-Tiles.webp",
+      "PackagePath": "staticwebassets\\images\\Trending-Tiles.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\default-thumbnail.jpg",
+      "PackagePath": "staticwebassets\\images\\default-thumbnail.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\figmalogo-removebg-preview.png",
+      "PackagePath": "staticwebassets\\images\\figmalogo-removebg-preview.png"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\google.png",
+      "PackagePath": "staticwebassets\\images\\google.png"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\lf (1).webp",
+      "PackagePath": "staticwebassets\\images\\lf (1).webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\lf (2).webp",
+      "PackagePath": "staticwebassets\\images\\lf (2).webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\lf (3).webp",
+      "PackagePath": "staticwebassets\\images\\lf (3).webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\lf (4).webp",
+      "PackagePath": "staticwebassets\\images\\lf (4).webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\lf (5).webp",
+      "PackagePath": "staticwebassets\\images\\lf (5).webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\images\\lf.webp",
+      "PackagePath": "staticwebassets\\images\\lf.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\js\\admin.js",
+      "PackagePath": "staticwebassets\\js\\admin.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\js\\book-detail.js",
+      "PackagePath": "staticwebassets\\js\\book-detail.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\js\\cart.js",
+      "PackagePath": "staticwebassets\\js\\cart.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\js\\display-book.js",
+      "PackagePath": "staticwebassets\\js\\display-book.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\js\\owner.js",
+      "PackagePath": "staticwebassets\\js\\owner.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\js\\profile.js",
+      "PackagePath": "staticwebassets\\js\\profile.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\0c7b58ad-f0bd-4b9c-a598-de6a78a28b0d.webp",
+      "PackagePath": "staticwebassets\\uploads\\0c7b58ad-f0bd-4b9c-a598-de6a78a28b0d.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\0eb38262-e916-4c5a-b60e-0860902d6719.webp",
+      "PackagePath": "staticwebassets\\uploads\\0eb38262-e916-4c5a-b60e-0860902d6719.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\1097bfcc-8803-45a0-9589-bc159b15deef.webp",
+      "PackagePath": "staticwebassets\\uploads\\1097bfcc-8803-45a0-9589-bc159b15deef.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\1198c5db-5b7c-4cab-a252-d9266cf9d010.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1198c5db-5b7c-4cab-a252-d9266cf9d010.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\20ccd60a-ad3b-4cb1-876d-ef898afc4542.png",
+      "PackagePath": "staticwebassets\\uploads\\20ccd60a-ad3b-4cb1-876d-ef898afc4542.png"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\22f9d139-8dd1-45fd-8f57-7dd594d99f0b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\22f9d139-8dd1-45fd-8f57-7dd594d99f0b.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\31a45198-51c2-4477-b3db-d67694624363.jpg",
+      "PackagePath": "staticwebassets\\uploads\\31a45198-51c2-4477-b3db-d67694624363.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\3467213a-5416-4d7b-b5d7-db2a35f2f9e4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\3467213a-5416-4d7b-b5d7-db2a35f2f9e4.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\3aea62f6-8074-46e3-b558-f6c801347314.jpg",
+      "PackagePath": "staticwebassets\\uploads\\3aea62f6-8074-46e3-b558-f6c801347314.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\4403e422-6ec7-4105-9aaf-131c417ccc5a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\4403e422-6ec7-4105-9aaf-131c417ccc5a.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\4a71582f-282d-41b0-ada0-587b4f75f37f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\4a71582f-282d-41b0-ada0-587b4f75f37f.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\4eba5ca0-cdf5-4d28-9c76-f92f02dae5b6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\4eba5ca0-cdf5-4d28-9c76-f92f02dae5b6.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\512cf0e4-c567-4b7f-a9d9-572b0fe76de3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\512cf0e4-c567-4b7f-a9d9-572b0fe76de3.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\547ef4ac-0001-47bd-b065-d11192659bda.webp",
+      "PackagePath": "staticwebassets\\uploads\\547ef4ac-0001-47bd-b065-d11192659bda.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\5a631b58-f8de-4adc-b733-87e57c0d6962.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5a631b58-f8de-4adc-b733-87e57c0d6962.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\5a9c1b67-1873-43fa-928b-632c122c9bab.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5a9c1b67-1873-43fa-928b-632c122c9bab.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\5e26e9ce-c090-4a5a-8f9d-9fcde57e0b49.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5e26e9ce-c090-4a5a-8f9d-9fcde57e0b49.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\5e4d41e2-1d4e-401c-964a-d00882b1dfd7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5e4d41e2-1d4e-401c-964a-d00882b1dfd7.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\6398b7cf-5de3-4d2a-9c16-4abac70d0e32.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6398b7cf-5de3-4d2a-9c16-4abac70d0e32.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\662058b1-f7d2-428c-9ad9-1fd99bcaf411.jpg",
+      "PackagePath": "staticwebassets\\uploads\\662058b1-f7d2-428c-9ad9-1fd99bcaf411.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\73d030ac-9bdd-4586-a527-665d23451df1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\73d030ac-9bdd-4586-a527-665d23451df1.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\844fb8c2-d5a5-4366-bf8f-e6f4909e1e38.jpg",
+      "PackagePath": "staticwebassets\\uploads\\844fb8c2-d5a5-4366-bf8f-e6f4909e1e38.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\85833852-3a93-4535-8965-66fa57599926.jpg",
+      "PackagePath": "staticwebassets\\uploads\\85833852-3a93-4535-8965-66fa57599926.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\85ca8bd5-1174-433d-b862-3ef3f99d4922.jpg",
+      "PackagePath": "staticwebassets\\uploads\\85ca8bd5-1174-433d-b862-3ef3f99d4922.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\86235e42-1873-4b4e-8228-b2536e08392b.png",
+      "PackagePath": "staticwebassets\\uploads\\86235e42-1873-4b4e-8228-b2536e08392b.png"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\92f1eecb-d503-47de-89d6-11f6b4d57b55.jpg",
+      "PackagePath": "staticwebassets\\uploads\\92f1eecb-d503-47de-89d6-11f6b4d57b55.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\9302f48f-3f0e-46db-82ec-38432bcab66c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9302f48f-3f0e-46db-82ec-38432bcab66c.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\9650d4a0-2a3d-4b0a-a249-be383c1d3e86.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9650d4a0-2a3d-4b0a-a249-be383c1d3e86.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\9a753e05-80f8-469b-aa17-ab7fba48401b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9a753e05-80f8-469b-aa17-ab7fba48401b.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\9adc6ac5-33a2-4c69-afd0-d9b04c08c344.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9adc6ac5-33a2-4c69-afd0-d9b04c08c344.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\9bdb11c9-5b71-412c-ba91-35e8386b5cd4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9bdb11c9-5b71-412c-ba91-35e8386b5cd4.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\a56f1c68-3f6a-4033-9a3f-a6340ae9f91e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a56f1c68-3f6a-4033-9a3f-a6340ae9f91e.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\aa9de33d-d408-448a-8a34-f25923d508cc.webp",
+      "PackagePath": "staticwebassets\\uploads\\aa9de33d-d408-448a-8a34-f25923d508cc.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\b52ab380-7cbb-4801-a208-70dfc86c09b1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b52ab380-7cbb-4801-a208-70dfc86c09b1.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\b571ae1d-37ba-4ca9-a1e6-c5f215d0dadf.webp",
+      "PackagePath": "staticwebassets\\uploads\\b571ae1d-37ba-4ca9-a1e6-c5f215d0dadf.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\b5ffb30f-f158-4647-869a-23cb44d0957d.webp",
+      "PackagePath": "staticwebassets\\uploads\\b5ffb30f-f158-4647-869a-23cb44d0957d.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\b8218338-f451-4ee2-9938-c8e88098b3c3.webp",
+      "PackagePath": "staticwebassets\\uploads\\b8218338-f451-4ee2-9938-c8e88098b3c3.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\bd4feeb1-f102-4390-bbf4-d0a6534beda8.jpg",
+      "PackagePath": "staticwebassets\\uploads\\bd4feeb1-f102-4390-bbf4-d0a6534beda8.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\c016a195-6e0d-44f7-be96-f252d006a1d2.webp",
+      "PackagePath": "staticwebassets\\uploads\\c016a195-6e0d-44f7-be96-f252d006a1d2.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\c12ffb87-f202-47f0-81d4-b7ec32e3ab47.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c12ffb87-f202-47f0-81d4-b7ec32e3ab47.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\c593e4de-8f7d-4e95-ba26-d60dd524d4ff.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c593e4de-8f7d-4e95-ba26-d60dd524d4ff.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\ca54db96-502c-4252-a367-2de977a02f2f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ca54db96-502c-4252-a367-2de977a02f2f.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\cd3c6d00-207f-4186-b34a-5a81b6de3b29.jpg",
+      "PackagePath": "staticwebassets\\uploads\\cd3c6d00-207f-4186-b34a-5a81b6de3b29.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\d258f353-4f35-4de7-8d8f-b89b4a62f4a0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d258f353-4f35-4de7-8d8f-b89b4a62f4a0.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\dd3f6f2b-effb-41a6-b11b-f194b2252add.jpg",
+      "PackagePath": "staticwebassets\\uploads\\dd3f6f2b-effb-41a6-b11b-f194b2252add.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\dd62d1c9-054b-470e-ab2f-41bfc0305c76.webp",
+      "PackagePath": "staticwebassets\\uploads\\dd62d1c9-054b-470e-ab2f-41bfc0305c76.webp"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\e83e9dea-4de3-4f62-b709-9cdb8f4d976f.png",
+      "PackagePath": "staticwebassets\\uploads\\e83e9dea-4de3-4f62-b709-9cdb8f4d976f.png"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\f47b1996-a64a-4d89-b2b3-2895ec3dfa3a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f47b1996-a64a-4d89-b2b3-2895ec3dfa3a.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\f708a8c0-3011-4160-81d2-8d7681376db1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\f708a8c0-3011-4160-81d2-8d7681376db1.jpg"
+    },
+    {
+      "Id": "D:\\Programming\\dotnet\\FPTBook-ASP\\FPTBook\\wwwroot\\uploads\\fdf591ba-0e38-47a8-968f-0ad0cd866a8f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\fdf591ba-0e38-47a8-968f-0ad0cd866a8f.jpg"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.FPTBook.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.build.FPTBook.props",
+      "PackagePath": "build\\FPTBook.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.FPTBook.props",
+      "PackagePath": "buildMultiTargeting\\FPTBook.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildTransitive.FPTBook.props",
+      "PackagePath": "buildTransitive\\FPTBook.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

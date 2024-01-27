@@ -1,0 +1,38 @@
+﻿@using FPTBook.Data;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    var user = await UserManager.GetUserAsync(User);
+    <li class="account-logged-in">
+        @if (!string.IsNullOrEmpty(user.ProfilePicture))
+        {
+            <img class="avatar-user" src="~/uploads/@user.ProfilePicture" alt="">
+        }
+        <a href="#">Hello @user.Name!</a>
+            <ul class="dropdown-account">
+                <li class="dropdown-account-item"><a asp-area="Identity" asp-page="/Account/Manage/Index">Manage Account</a></li>
+                <li class="dropdown-account-item"><a asp-area="Identity" asp-page="/Account/Manage/Index">Order Status</a></li>
+                <li class="dropdown-account-item"><a asp-action="Logout" asp-controller="Home">Logout</a></li>
+            </ul>
+        </li>
+}
+else
+{
+        <li class="account">
+            <a href="#">
+                <span class="user-icon"><i class="fa-regular fa-circle-user"></i></span>
+                My Account
+                <span class="up-icon"><i class="fa-solid fa-angle-up"></i></span>
+                <span class="down-icon"><i class="fa-solid fa-angle-down"></i></span>
+            </a>
+            <ul class="dropdown-account">
+                <li class="sign-in-btn"><a asp-area="Identity" asp-page="/Account/Login">Sign In</a></li>
+                <li class="create-account-link"><a asp-area="Identity" asp-page="/Account/Register">Create an Account</a></li>
+                <li class="dropdown-account-item"><a asp-area="Identity" asp-page="/Account/Login">Manage Account</a></li>
+                <li class="dropdown-account-item"><a asp-area="Identity" asp-page="/Account/Login">Order Status</a></li>
+            </ul>
+        </li>
+}

@@ -1,0 +1,144 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Profile";
+    // ViewData["ActivePage"] = ManageNavPages.Index;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var order = ViewData["Orders"] as IEnumerable<dynamic>;
+}
+<link rel="stylesheet" href="~/css/profile.css" asp-append-version="true">
+<style>
+    .form-group-img{
+        margin: 1rem auto;
+    }
+
+    .form-group-img img{
+        width: 20rem;
+        height: 20rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+</style>
+
+<hr class="div-profile-page">
+
+<div class="profile-content">
+    <partial name="_StatusMessage" for="StatusMessage" />
+    <div class="title"><h1>My Account</h1></div>
+    <div class="profile-tabs">
+        <div class="profile-tab-item active">Orders</div>
+        <div class="profile-tab-item">Account</div>
+        <div class="line"></div>
+    </div>
+    <div class="profile-tab-content">
+        <div class="profile-content-item active">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Order number</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if(order != null){
+                        foreach (var item in order)
+                        {
+                            
+                        
+                        <tr>
+                                <th scope="row">@item.OrderId</th>
+                                <td>@item.OrderDates</td>
+                                <td>$@item.TotalPrice</td>
+                                @if (item.OrderStatus == false)
+                                {
+                                    <td style="color: orange ; font-weight: bolder">Process</td>
+                                }
+                                else
+                                {
+                                    <td style="color: green" ; font-weight: bolder>Successed</td>
+                                }
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="profile-content-item">
+            <div class="card">
+                <div class="card-header">
+                    Account
+                </div>
+                <div class="card-body">
+                    
+                    <div class="form-information">
+                        <form method="post" enctype="multipart/form-data">
+                            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                            <div class="form-group">
+                                <label asp-for="Input.Name" for="name">Name</label>
+                                <input asp-for="Input.Name" id="name" type="text" disabled>
+                                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Username" for="email">Email</label>
+                                <input asp-for="Username" id="email" type="text" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Input.Address" for="address">Address</label>
+                                <input asp-for="Input.Address" id="address" type="text" disabled>
+                            </div>
+                            <div class="form-group form-group-img">
+                                @if (!string.IsNullOrEmpty(Model.Input.ProfilePicture))
+                                {
+                                    <img src="~/uploads/@Model.Input.ProfilePicture"/>
+                                }
+                                else
+                                {
+                                    <img src="~/images/default-thumbnail.jpg"/>
+                                }
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="Input.ImageFile" id="img-file" disabled>
+                            </div>
+                            <div class="change-info-btn">Change Information</div>
+                            <div class="change-info-btn-box">
+                                <input type="hidden" name="changeInfoSubmit" value="SubmitChangeInfo" />
+                                <button class="confirm-change-btn">Save Changes</button>
+                                <p class="cancel-btn">Cancel</p>    
+                            </div>
+                        </form>
+                    </div>
+                    <div class="change-pwd-btn">
+                        Change Password
+                    </div>
+                </div>
+            </div>
+            <div class="change-pwd-form">
+                <form method="post">
+                    <div class="form-group">
+                        <input asp-for="Input.OldPassword" type="password" placeholder="Current Password">
+                        <span asp-validation-for="Input.OldPassword" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Input.NewPassword" type="password" placeholder="New Password">
+                        <span asp-validation-for="Input.NewPassword" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Input.ConfirmPassword" type="password" placeholder="Confirm Password">
+                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div class="change-pwd-btn-box">
+                        <input type="hidden" name="changePasswordSubmit" value="SubmitChangePassword" />
+                        <button class="confirm-change-pwd-btn">Update Password</button>
+                        <p class="change-pwd-cancel-btn">Cancel</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="overlay"></div>
+<script src="~/js/profile.js" asp-append-version="true"></script>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,71 @@
+﻿<link rel="stylesheet" href="~/css/checkout.css" asp-append-version="true">
+
+@model IEnumerable<dynamic>
+@{
+    var date = ViewData["Date"];
+    var status = ViewData["Status"];
+    var totals = ViewData["TotalPrice"];
+
+    //Sum of all items
+
+}
+
+@if(Model.Count() != 0)
+{
+    <hr>
+
+    <div class="checkout-content">
+        <div class="title">
+            <h1>You have ordered. Owner will confirm your order soon!</h1>
+        </div>
+        <div class="checkout-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Owner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <div class="item-img-box"><img src="~/uploads/@item.Product.Picture" alt=""></div>
+                                <div class="item-content">
+                                    <h3 class="item-title">@item.Product.Name</h3>
+                                    <p class="item-format">Hardcover</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="item-qty">
+                                    @item.Cart.Quantity
+                                </div>
+                            </td>
+                            <td><p class="item-price">@(item.Product.Price * item.Cart.Quantity)</p></td>
+                            <td><p class="item-author">@item.Owner.Name</p></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="bottom">
+            <div class="back">
+                <a asp-action="Index">Continue Shopping</a>
+            </div>
+            <div class="order-info">
+                <p>Order Date: @date</p>
+                <p>Total: $@totals</p>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <h1 style="text-align:center">Please, Add book into cart to check out</h1>
+}
+
+
+

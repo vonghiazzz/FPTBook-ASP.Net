@@ -1,0 +1,18 @@
+﻿@model List<Genre>
+
+@{
+    var count = Model.Count();
+    var group = count % 6 == 0 ? count / 6 : (count / 6) + 1;
+    var groupIndex = 0;
+}
+
+@for(var i=0; i<group; i++)
+{
+    <ul class="sub-menu">
+        @foreach (var genre in Model.Skip(groupIndex * 6).Take(6))
+        {
+            <li class="drop-item"><a asp-action="DisplayProductByGenre" asp-route-id="@genre.Id">@genre.Name</a></li>
+        }
+    </ul>
+    groupIndex++;
+}
